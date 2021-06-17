@@ -1,4 +1,4 @@
-<pat:Patient xmlns:pat="http://www.codewithkenny/Patient">
+<pat:Patient xmlns:pat="http://www.codewithkenny/Patient" id="123">
   <pat:name>Penny</pat:name>
   <pat:age>30</pat:age>
   <!--Optional:-->

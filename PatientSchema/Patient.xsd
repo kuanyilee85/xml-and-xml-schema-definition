@@ -20,6 +20,8 @@
             <!--            Complex types in other complex types-->
             <element name="paymentType" type="xyz:PaymentType"/>
         </sequence>
+
+        <attribute name="id" type="int"/>
     </complexType>
 
 <!--choice, one of the elements-->
