@@ -21,7 +21,7 @@
             <element name="paymentType" type="xyz:PaymentType"/>
         </sequence>
 
-        <attribute name="id" type="int"/>
+        <attribute name="id" type="int" use="required"/>
     </complexType>
 
 <!--choice, one of the elements-->

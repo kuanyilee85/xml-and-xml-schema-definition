@@ -4,7 +4,7 @@
 <!--xsi:schemaLocation ==> tells the schema location-->
 <pat:Patient xmlns:pat="http://www.codewithkenny/Patient"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:schemaLocation="http://www.codewithkenny/Patient Patient.xsd" id="1234">
+             xsi:schemaLocation="http://www.codewithkenny/Patient Patient.xsd">
   <pat:name>patient1</pat:name>
   <pat:age>5</pat:age>
   <pat:email>patient@gmail.com</pat:email>
