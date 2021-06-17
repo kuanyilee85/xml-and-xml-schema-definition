@@ -16,12 +16,20 @@
         </sequence>
     </complexType>
 
-<!--choice-->
+<!--choice, one of the elements-->
     <complexType name="PaymentType">
         <choice>
             <element name="cash" type="decimal"/>
             <element name="insurance"/>
         </choice>
+    </complexType>
+
+<!--all the elements should occur at least once, order doesn't matter-->
+    <complexType name="Insurance">
+        <all>
+            <element name="provider" type="string"/>
+            <element name="limit" type="decimal"/>
+        </all>
     </complexType>
     
     <simpleType name="String15Chars">
