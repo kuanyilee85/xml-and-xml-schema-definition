@@ -13,6 +13,8 @@
             <element name="email" type="string"/>
             <element name="gender" type="xyz:Gender"/>
             <element name="phone" type="string"/>
+<!--            Complex types in other complex types-->
+            <element name="paymentType" type="xyz:PaymentType"/>
         </sequence>
     </complexType>
 
@@ -20,7 +22,7 @@
     <complexType name="PaymentType">
         <choice>
             <element name="cash" type="decimal"/>
-            <element name="insurance"/>
+            <element name="insurance" type="xyz:Insurance"/>
         </choice>
     </complexType>
 
