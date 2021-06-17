@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.codewithkenny/Patient"
+    xmlns:xyz="http://www.codewithkenny/Patient"
+    elementFormDefault="qualified">
+
+    <element name="Patient" type="xyz:Patient"/>
+    <complexType name="Patient">
+        <sequence>
+            <element name="name" type="string"/>
+            <element name="age" type="int"/>
+            <element name="email" type="string"/>
+            <element name="gender" type="string"/>
+            <element name="phone" type="string"/>
+        </sequence>
+    </complexType>
+</schema>
