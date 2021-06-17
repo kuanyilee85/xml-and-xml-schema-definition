@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- xmlns:xyz ==> XML name space and prefix to present the URL of XML file-->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.codewithkenny/Patient"
+        xmlns:xyz="http://www.codewithkenny/Patient"
+        elementFormDefault="qualified">
+    <!--describe what it is of this XML file-->
+    <element name="Patient" type="xyz:Patient"/>
+    <!-- complexType contain other elements and attributes-->
+    <complexType name="Patient">
+        <sequence>
+            <element name="name" type="xyz:String15Chars"/>
+            <element name="age" type="int"/>
+            <!--            as optional-->
+            <element name="email" type="string" minOccurs="0"/>
+            <element name="gender" type="xyz:Gender"/>
+            <!--            unlimited-->
+            <element name="phone" type="string" maxOccurs="unbounded"/>
+            <!--            maximum occur times-->
+            <element name="zipcode" type="string" maxOccurs="1"/>
+            <!--            Complex types in other complex types-->
+            <element name="paymentType" type="xyz:PaymentType"/>
+            <element name="customer" type="string"/>
+            <element name="product" type="xyz:productType" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="customerType">
+        <all>
+            <element name="name" type="string"/>
+            <element name="phone" type="string" maxOccurs="0"/>
+        </all>
+    </complexType>
+
+    <complexType name="productType">
+        <all>
+            <element name="product" type="int"/>
+        </all>
+    </complexType>
+
+    <!--choice, one of the elements-->
+    <complexType name="PaymentType">
+        <choice>
+            <element name="cash" type="decimal"/>
+            <element name="insurance" type="xyz:Insurance"/>
+        </choice>
+    </complexType>
+
+    <!--all the elements should occur at least once, order doesn't matter-->
+    <complexType name="Insurance">
+        <all>
+            <element name="provider" type="string"/>
+            <element name="limit" type="decimal"/>
+        </all>
+    </complexType>
+
+    <simpleType name="String15Chars">
+        <restriction base="string">
+            <maxLength value="15"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="Gender">
+        <restriction base="string">
+            <enumeration value="M"/>
+            <enumeration value="F"/>
+        </restriction>
+    </simpleType>
+
+</schema>
