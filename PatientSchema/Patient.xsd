@@ -18,7 +18,7 @@
     
     <simpleType name="String15Chars">
         <restriction base="string">
-            <maxLength value="15"
+            <maxLength value="15"/>
         </restriction>
     </simpleType>
 

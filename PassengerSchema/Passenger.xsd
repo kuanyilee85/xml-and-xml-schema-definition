@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.codewithkenny/Passenger"
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.codewithkenny/Passenger"
         xmlns:xyz="http://www.codewithkenny/Passenger"
         elementFormDefault="qualified">
 
