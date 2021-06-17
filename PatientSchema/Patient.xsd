@@ -21,7 +21,7 @@
             <element name="paymentType" type="xyz:PaymentType"/>
         </sequence>
 
-        <attribute name="id" type="int" use="required"/>
+        <attribute name="id" type="xyz:IdType" use="required"/>
     </complexType>
 
 <!--choice, one of the elements-->
@@ -39,6 +39,12 @@
             <element name="limit" type="decimal"/>
         </all>
     </complexType>
+
+    <simpleType name="IdType">
+        <restriction base="int">
+            <pattern value="[0-9]*"/>
+        </restriction>
+    </simpleType>
     
     <simpleType name="String15Chars">
         <restriction base="string">
