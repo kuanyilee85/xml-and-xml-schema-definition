@@ -8,6 +8,6 @@
   <pat:name>patient1</pat:name>
   <pat:age>5</pat:age>
   <pat:email>patient@gmail.com</pat:email>
-  <pat:gender>male</pat:gender>
+  <pat:gender>M</pat:gender>
   <pat:phone>1234567890</pat:phone>
 </pat:Patient>
