@@ -15,6 +15,14 @@
             <element name="phone" type="string"/>
         </sequence>
     </complexType>
+
+<!--choice-->
+    <complexType name="PaymentType">
+        <choice>
+            <element name="cash" type="decimal"/>
+            <element name="insurance"/>
+        </choice>
+    </complexType>
     
     <simpleType name="String15Chars">
         <restriction base="string">
