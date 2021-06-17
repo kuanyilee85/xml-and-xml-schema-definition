@@ -1,0 +1,18 @@
+<pat:Patient xmlns:pat="http://www.codewithkenny/Patient">
+  <pat:name>Penny</pat:name>
+  <pat:age>30</pat:age>
+  <!--Optional:-->
+  <pat:email>penny@gmail.com</pat:email>
+  <pat:gender>F</pat:gender>
+  <!--1 or more repetitions:-->
+  <pat:phone>321</pat:phone>
+  <pat:zipcode>20878</pat:zipcode>
+  <pat:paymentType>
+    <!--You have a CHOICE of the next 2 items at this level-->
+<!--    <pat:cash>1000.00</pat:cash>-->
+    <pat:insurance>
+      <pat:provider>BCBS</pat:provider>
+      <pat:limit>1000.00</pat:limit>
+    </pat:insurance>
+  </pat:paymentType>
+</pat:Patient>
