@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- xmlns:xyz ==> XML name space and prefix to present the URL of XML file-->
 <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.codewithkenny/Patient"
     xmlns:xyz="http://www.codewithkenny/Patient"
     elementFormDefault="qualified">
 
     <element name="Patient" type="xyz:Patient"/>
+<!-- complexType contain other elements and attributes   -->
     <complexType name="Patient">
         <sequence>
             <element name="name" type="string"/>

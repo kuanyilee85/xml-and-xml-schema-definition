@@ -1,7 +1,13 @@
-<pat:Patient xmlns:pat="http://www.codewithkenny/Patient">
-  <pat:name>string</pat:name>
-  <pat:age>3</pat:age>
-  <pat:email>string</pat:email>
-  <pat:gender>string</pat:gender>
-  <pat:phone>string</pat:phone>
+<?xml version="1.0" encoding="utf-8"?>
+<!--xmlns:pat ==> tells where the XML is and its prefix-->
+<!--xmlns:xsi ==> tells where the XSD is and its prefix-->
+<!--xsi:schemaLocation ==> tells the schema location-->
+<pat:Patient xmlns:pat="http://www.codewithkenny/Patient"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.codewithkenny/Patient Patient.xsd">
+  <pat:name>patient1</pat:name>
+  <pat:age>5</pat:age>
+  <pat:email>patient@gmail.com</pat:email>
+  <pat:gender>male</pat:gender>
+  <pat:phone>1234567890</pat:phone>
 </pat:Patient>
