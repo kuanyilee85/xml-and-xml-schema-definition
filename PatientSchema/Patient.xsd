@@ -10,10 +10,14 @@
         <sequence>
             <element name="name" type="xyz:String15Chars"/>
             <element name="age" type="int"/>
-            <element name="email" type="string"/>
+<!--            as optional-->
+            <element name="email" type="string" minOccurs="0"/>
             <element name="gender" type="xyz:Gender"/>
-            <element name="phone" type="string"/>
-<!--            Complex types in other complex types-->
+<!--            unlimited-->
+            <element name="phone" type="string" maxOccurs="unbounded"/>
+            <!--            maximum occur times-->
+            <element name="zipcode" type="string" maxOccurs="1"/>
+            <!--            Complex types in other complex types-->
             <element name="paymentType" type="xyz:PaymentType"/>
         </sequence>
     </complexType>
