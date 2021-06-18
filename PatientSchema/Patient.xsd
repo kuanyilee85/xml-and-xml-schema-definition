@@ -3,6 +3,7 @@
 <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.codewithkenny/Patient"
     xmlns:xyz="http://www.codewithkenny/Patient"
     elementFormDefault="qualified">
+    <include schemaLocation="PaymentType.xsd"/>
 <!--describe what it is of this XML file-->
     <element name="Patient" type="xyz:Patient"/>
 <!-- complexType contain other elements and attributes-->
@@ -22,22 +23,6 @@
         </sequence>
 
         <attribute name="id" type="xyz:IdType" use="required"/>
-    </complexType>
-
-<!--choice, one of the elements-->
-    <complexType name="PaymentType">
-        <choice>
-            <element name="cash" type="decimal"/>
-            <element name="insurance" type="xyz:Insurance"/>
-        </choice>
-    </complexType>
-
-<!--all the elements should occur at least once, order doesn't matter-->
-    <complexType name="Insurance">
-        <all>
-            <element name="provider" type="string"/>
-            <element name="limit" type="decimal"/>
-        </all>
     </complexType>
 
     <simpleType name="IdType">

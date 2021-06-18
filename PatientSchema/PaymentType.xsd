@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.codewithkenny/Patient"
+        xmlns:xyz="http://www.codewithkenny/Patient"
+        elementFormDefault="qualified">
+    <!--choice, one of the elements-->
+    <complexType name="PaymentType">
+        <choice>
+            <element name="cash" type="decimal"/>
+            <element name="insurance" type="xyz:Insurance"/>
+        </choice>
+    </complexType>
+
+    <!--all the elements should occur at least once, order doesn't matter-->
+    <complexType name="Insurance">
+        <all>
+            <element name="provider" type="string"/>
+            <element name="limit" type="decimal"/>
+        </all>
+    </complexType>
+</schema>
