@@ -1,0 +1,16 @@
+<res:reservation xmlns:res="http://codewithkenny.com/Reservation">
+  <flight>
+    <flightnumber>3</flightnumber>
+    <operatingAirlines>US</operatingAirlines>
+    <arrivalCity>some city</arrivalCity>
+    <dateOfDeparture>2008-09-28</dateOfDeparture>
+    <estimatedTimeOfDeparture>19:18:33</estimatedTimeOfDeparture>
+  </flight>
+  <passenger>
+    <lastname>string</lastname>
+    <firstname>string</firstname>
+    <middlename>string</middlename>
+    <email>string</email>
+    <phone>1234567890</phone>
+  </passenger>
+</res:reservation>
