@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- xmlns:xyz ==> XML name space and prefix to present the URL of XML file-->
-<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.codewithkenny/Patient"
-    xmlns:xyz="http://www.codewithkenny/Patient"
-    elementFormDefault="qualified">
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.codewithkenny/Patient"
+        xmlns:xyz="http://www.codewithkenny/Patient"
+        xmlns:common="http://www.codewithkenny/Common"
+        elementFormDefault="qualified">
     <include schemaLocation="PaymentType.xsd"/>
+    <import schemaLocation="Common.xsd"
+            namespace="http://www.codewithkenny/Common"/>
 <!--describe what it is of this XML file-->
     <element name="Patient" type="xyz:Patient"/>
 <!-- complexType contain other elements and attributes-->
@@ -22,15 +26,9 @@
             <element name="paymentType" type="xyz:PaymentType"/>
         </sequence>
 
-        <attribute name="id" type="xyz:IdType" use="required"/>
+        <attribute name="id" type="common:Id" use="required"/>
     </complexType>
 
-    <simpleType name="IdType">
-        <restriction base="int">
-            <pattern value="[0-9]*"/>
-        </restriction>
-    </simpleType>
-    
     <simpleType name="String15Chars">
         <restriction base="string">
             <maxLength value="15"/>
