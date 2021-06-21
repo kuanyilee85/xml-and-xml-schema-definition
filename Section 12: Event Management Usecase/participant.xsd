@@ -4,4 +4,12 @@
         xmlns:tns="http://www.eventmanagement.com/event"
         elementFormDefault="qualified">
 
+    <complexType name="participant">
+        <sequence>
+            <element name="name" type="string"/>
+            <element name="email" type="string"/>
+            <element name="phone" type="string"/>
+        </sequence>
+    </complexType>
+
 </schema>
