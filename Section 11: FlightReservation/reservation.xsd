@@ -24,7 +24,7 @@
     <complexType name="flight">
         <sequence>
             <element name="flightnumber" type="int"/>
-            <element name="operatingAirlines" type="tns:operatingAiralines"/>
+            <element name="operatingAirlines" type="tns:operatingAirlines"/>
             <element name="arrivalCity" type="tns:stringmax20"/>
             <element name="dateOfDeparture" type="date"/>
             <element name="estimatedTimeOfDeparture" type="time"/>
@@ -43,7 +43,7 @@
         </restriction>
     </simpleType>
 
-    <simpleType name="operatingAiralines">
+    <simpleType name="operatingAirlines">
         <restriction base="string">
             <enumeration value="US"/>
             <enumeration value= "American"/>
