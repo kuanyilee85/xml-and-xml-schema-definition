@@ -2,6 +2,7 @@ package com.bharath.xmlparsers.dom;
 
 import com.bharath.xmlparsers.dto.DriversLicense;
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
@@ -31,8 +32,12 @@ public class DOMParser {
         Node lastNameItem = lastNameList.item(0);
         license.setLastName(lastNameItem.getTextContent());
 
+        Element documentElement = document.getDocumentElement();
+        license.setStatus(documentElement.getAttribute("status"));
+
         System.out.println(license.getNumber());
         System.out.println(license.getFirstName());
         System.out.println(license.getLastName());
+        System.out.println(license.getStatus());
     }
 }
