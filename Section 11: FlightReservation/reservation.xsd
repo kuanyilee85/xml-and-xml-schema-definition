@@ -16,7 +16,7 @@
             <element name="lastname" type="tns:stringmax20"/>
             <element name="firstname" type="tns:stringmax20"/>
             <element name="middlename" type="tns:stringmax20"/>
-            <element name="email" type="tns:stringmax20"/>
+            <element name="email" type="tns:email"/>
             <element name="phone" type="tns:phone"/>
         </sequence>
     </complexType>
@@ -42,10 +42,16 @@
             <pattern value="[0-9]{10}"/>
         </restriction>
     </simpleType>
+    
+    <simpleType name="email">
+        <restriction base="string">
+            <pattern value="[^@]+@[^\.]+\..+"/>
+        </restriction>
+    </simpleType>
 
     <simpleType name="operatingAirlines">
         <restriction base="string">
-            <enumeration value="US"/>
+            <enumeration value= "US"/>
             <enumeration value= "American"/>
             <enumeration value= "Alaska"/>
             <enumeration value= "Southwest"/>

@@ -10,7 +10,7 @@
     <lastname>string</lastname>
     <firstname>string</firstname>
     <middlename>string</middlename>
-    <email>string</email>
+    <email>test@test.com</email>
     <phone>1234567890</phone>
   </passenger>
 </res:reservation>
