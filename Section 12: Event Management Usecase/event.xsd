@@ -21,6 +21,7 @@
                 <element name="venue" type="tns:venue"/>
                 <element name="participant" type="tns:participant" minOccurs="3" maxOccurs="unbounded"/>
             </sequence>
+            <attribute name="id" type="common:id" use="required"></attribute>
         </complexType>
     </element>
 </schema>

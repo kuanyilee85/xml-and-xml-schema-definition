@@ -23,4 +23,9 @@
             <pattern value="[0-9]{10}"/>
         </restriction>
     </simpleType>
+    <simpleType name="id">
+        <restriction>
+            <pattern value="[0-9]{6}"/>
+        </restriction>
+    </simpleType>
 </schema>
