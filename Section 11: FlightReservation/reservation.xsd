@@ -2,6 +2,10 @@
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
         targetNamespace="http://codewithkenny.com/Reservation"
         xmlns:tns="http://codewithkenny.com/Reservation">
+
+    <include schemaLocation="flight.xsd"/>
+    <include schemaLocation="common.xsd"/>
+
     <element name="reservation">
         <complexType>
             <sequence>
@@ -20,22 +24,6 @@
             <element name="phone" type="tns:phone"/>
         </sequence>
     </complexType>
-
-    <complexType name="flight">
-        <sequence>
-            <element name="flightnumber" type="int"/>
-            <element name="operatingAirlines" type="tns:operatingAirlines"/>
-            <element name="arrivalCity" type="tns:stringmax20"/>
-            <element name="dateOfDeparture" type="date"/>
-            <element name="estimatedTimeOfDeparture" type="time"/>
-        </sequence>
-    </complexType>
-
-    <simpleType name="stringmax20">
-        <restriction base="string">
-            <maxLength value="20"/>
-        </restriction>
-    </simpleType>
     
     <simpleType name="phone">
         <restriction base="string">
@@ -46,16 +34,6 @@
     <simpleType name="email">
         <restriction base="string">
             <pattern value="[^@]+@[^\.]+\..+"/>
-        </restriction>
-    </simpleType>
-
-    <simpleType name="operatingAirlines">
-        <restriction base="string">
-            <enumeration value= "US"/>
-            <enumeration value= "American"/>
-            <enumeration value= "Alaska"/>
-            <enumeration value= "Southwest"/>
-            <enumeration value= "Delta"/>
         </restriction>
     </simpleType>
 
