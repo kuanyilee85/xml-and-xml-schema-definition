@@ -14,7 +14,7 @@ public class SAXParserDemo {
 		SAXParserFactory parserFactory = SAXParserFactory.newInstance();
 		SAXParser parser = parserFactory.newSAXParser();
 
-		SAXHandler handler = new SAXHandler();
+		SAXHandlerDemo handler = new SAXHandlerDemo();
 		parser.parse(ClassLoader.getSystemResourceAsStream("xml/DriversLicense.xml"), handler);
 		System.out.println(handler.getDriversLicense().getFirstName());
 		System.out.println(handler.getDriversLicense().getLastName());
