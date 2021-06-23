@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84f28ddb-5651-4234-8dc3-57888559043d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/bharath/xmlparsers/sax/SAXParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/bharath/xmlparsers/sax/SAXHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/bharath/xmlparsers/sax/SAXHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/bharath/xmlparsers/sax/SAXParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/bharath/xmlparsers/sax/SAXParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +97,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="extract.method.default.visibility" value="public" />
   </component>
-  <component name="RunManager" selected="Application.DOMParser">
+  <component name="RunManager" selected="Application.SAXParser">
     <configuration name="DOMParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.bharath.xmlparsers.dom.DOMParser" />
       <module name="untitled104" />
@@ -120,12 +121,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SAXParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bharath.xmlparsers.sax.SAXParser" />
+      <module name="untitled104" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bharath.xmlparsers.sax.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.DOMParser" />
+      <item itemvalue="Application.SAXParser" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SAXParser" />
         <item itemvalue="Application.DOMParser" />
       </list>
     </recent_temporary>

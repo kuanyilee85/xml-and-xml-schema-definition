@@ -7,6 +7,14 @@ import org.xml.sax.helpers.DefaultHandler;
 
 public class SAXHandler extends DefaultHandler {
 
+    public DriversLicense getDriversLicense() {
+        return driversLicense;
+    }
+
+    public void setDriversLicense(DriversLicense driversLicense) {
+        this.driversLicense = driversLicense;
+    }
+
     private DriversLicense driversLicense;
     private String content;
 
